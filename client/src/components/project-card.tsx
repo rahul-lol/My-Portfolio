@@ -6,6 +6,7 @@ interface ProjectCardProps {
   technologies: string[];
   imageUrl: string;
   delay?: number;
+  githubUrl?: string;
 }
 
 export default function ProjectCard({
@@ -14,15 +15,23 @@ export default function ProjectCard({
   technologies,
   imageUrl,
   delay = 0,
+  githubUrl,
 }: ProjectCardProps) {
+  const handleClick = () => {
+    if (githubUrl) {
+      window.open(githubUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <motion.div
-      className="project-card p-8 rounded-lg"
+      className={`project-card p-8 rounded-lg ${githubUrl ? 'cursor-pointer' : ''}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.8, delay, ease: "easeOut" }}
       whileHover={{ y: -5 }}
+      onClick={handleClick}
     >
       <div className="mb-6">
         <img
