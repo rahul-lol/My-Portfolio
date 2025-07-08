@@ -4,15 +4,15 @@ import ProjectCard from "@/components/project-card";
 export default function Projects() {
   const projects = [
     {
-      title: "AI Camera System for Wildlife Monitoring",
-      description: "Designed an AI-powered camera system for real-time wildlife tracking, reducing manual monitoring efforts and improving data collection efficiency through computer vision and machine learning algorithms.",
-      technologies: ["Python", "TensorFlow", "OpenCV", "IoT"],
-      imageUrl: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      title: "Classifile",
+      description: "ClasifileDesktop is a smart desktop app that instantly organizes your files by type into tidy folders, with a beautiful Mac-inspired UI. Batch-sort or auto-classify any folder—including Downloads—with a single click, and safely undo changes anytime. Clasifile brings effortless order to your digital life.",
+      technologies: ["Python", "PySide6"],
+      imageUrl: "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     },
     {
-      title: "GPS Routing Chatbot",
-      description: "Developed an interactive chatbot that provides real-time navigation and route optimization using Google Maps API, featuring natural language processing for intuitive user interactions.",
-      technologies: ["JavaScript", "Node.js", "Google Maps API", "NLP"],
+      title: "SRM GPS Routing System",
+      description: "Developed an interactive GPS routing system that provides real-time navigation and route optimization using Google Maps API, featuring natural language processing for intuitive user interactions.",
+      technologies: ["Flask", "Python", "Google Maps API"],
       imageUrl: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     },
     {
