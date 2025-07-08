@@ -49,7 +49,7 @@ export default function Navigation() {
         ? 'bg-[var(--near-black)]/90 border-[var(--dark-gray)]' 
         : 'bg-[var(--cream)]/95 border-[var(--near-black)]/10'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-6 sm:px-8">
         <div className="flex justify-between items-center h-16">
           <div className={`font-bold text-xl transition-colors ${
             activeSection === 'home' ? 'text-[var(--cream)]' : 'text-[var(--near-black)]'
