@@ -39,14 +39,21 @@ export default function Navigation() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Run once on mount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--cream)]/95 backdrop-blur-sm border-b border-black/10">
+    <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b transition-all duration-300 ${
+      activeSection === 'home' 
+        ? 'bg-black/90 border-gray-800' 
+        : 'bg-[var(--cream)]/95 border-black/10'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl">
+          <div className={`font-bold text-xl transition-colors ${
+            activeSection === 'home' ? 'text-white' : 'text-black'
+          }`}>
             <button onClick={() => scrollToSection("home")}>RG</button>
           </div>
           
@@ -56,9 +63,9 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`nav-link font-medium ${
+                className={`nav-link font-medium transition-colors ${
                   activeSection === item.id ? "active" : ""
-                }`}
+                } ${activeSection === 'home' ? 'text-white' : 'text-black'}`}
               >
                 {item.label}
               </button>
@@ -67,7 +74,9 @@ export default function Navigation() {
           
           {/* Mobile menu button */}
           <button
-            className="md:hidden"
+            className={`md:hidden transition-colors ${
+              activeSection === 'home' ? 'text-white' : 'text-black'
+            }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

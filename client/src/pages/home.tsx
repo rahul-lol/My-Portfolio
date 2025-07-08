@@ -2,11 +2,11 @@ import AnimatedSection from "@/components/animated-section";
 
 export default function Home() {
   return (
-    <section className="page-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+    <section className="min-h-screen bg-black text-white flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-left">
           <AnimatedSection>
-            <h1 className="hero-text font-black mb-6">
+            <h1 className="hero-text text-white mb-4">
               RAHUL
               <br />
               GOPI
@@ -14,40 +14,37 @@ export default function Home() {
           </AnimatedSection>
           
           <AnimatedSection delay={0.2}>
-            <p className="text-xl md:text-2xl font-medium mb-8">
-              Computer Science Engineering Student
-            </p>
+            <div className="text-base md:text-lg font-medium text-gray-300 max-w-md">
+              <p className="mb-2">Computer Science Engineering Student</p>
+              <p className="mb-2">Specializing in AI/ML</p>
+              <p className="mb-2">Full-Stack Developer</p>
+              <p>Problem Solver</p>
+            </div>
           </AnimatedSection>
           
           <AnimatedSection delay={0.4}>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12">
-              Specializing in AI/ML • Full-Stack Developer • Problem Solver
-            </p>
-          </AnimatedSection>
-          
-          <AnimatedSection delay={0.6}>
-            <div className="flex justify-center space-x-6">
+            <div className="mt-8 flex space-x-6">
               <a
                 href="https://linkedin.com/in/rahul-g-639926265"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:scale-110 transition-transform"
+                className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
               >
-                <i className="fab fa-linkedin"></i>
+                LINKEDIN
               </a>
               <a
                 href="https://github.com/rahul-lol"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl hover:scale-110 transition-transform"
+                className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
               >
-                <i className="fab fa-github"></i>
+                GITHUB
               </a>
               <a
                 href="mailto:rahul.gopi0604@gmail.com"
-                className="text-2xl hover:scale-110 transition-transform"
+                className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
               >
-                <i className="fas fa-envelope"></i>
+                EMAIL
               </a>
             </div>
           </AnimatedSection>

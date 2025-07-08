@@ -70,10 +70,11 @@
 
 @layer components {
   .hero-text {
-    font-size: clamp(4rem, 10vw, 10rem);
-    line-height: 0.85;
-    letter-spacing: -0.03em;
+    font-size: clamp(5rem, 12vw, 12rem);
+    line-height: 0.8;
+    letter-spacing: -0.04em;
     font-weight: 900;
+    text-transform: uppercase;
   }
   
   .section-title {
@@ -115,7 +116,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--near-black);
+    background: currentColor;
     transition: width 0.3s ease;
   }
   
