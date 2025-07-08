@@ -46,13 +46,13 @@ export default function Navigation() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b transition-all duration-300 ${
       activeSection === 'home' 
-        ? 'bg-black/90 border-gray-800' 
-        : 'bg-[var(--cream)]/95 border-black/10'
+        ? 'bg-[var(--near-black)]/90 border-[var(--dark-gray)]' 
+        : 'bg-[var(--cream)]/95 border-[var(--near-black)]/10'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className={`font-bold text-xl transition-colors ${
-            activeSection === 'home' ? 'text-white' : 'text-black'
+            activeSection === 'home' ? 'text-[var(--cream)]' : 'text-[var(--near-black)]'
           }`}>
             <button onClick={() => scrollToSection("home")}>RG</button>
           </div>
@@ -65,7 +65,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection(item.id)}
                 className={`nav-link font-medium transition-colors ${
                   activeSection === item.id ? "active" : ""
-                } ${activeSection === 'home' ? 'text-white' : 'text-black'}`}
+                } ${activeSection === 'home' ? 'text-[var(--cream)]' : 'text-[var(--near-black)]'}`}
               >
                 {item.label}
               </button>
@@ -75,7 +75,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             className={`md:hidden transition-colors ${
-              activeSection === 'home' ? 'text-white' : 'text-black'
+              activeSection === 'home' ? 'text-[var(--cream)]' : 'text-[var(--near-black)]'
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >

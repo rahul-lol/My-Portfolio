@@ -23,9 +23,10 @@
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
   --ring: hsl(0, 0%, 10%);
   --radius: 0.5rem;
-  --cream: hsl(45, 25%, 96%);
-  --dark-gray: hsl(0, 0%, 20%);
-  --near-black: hsl(0, 0%, 10%);
+  --cream: hsl(42, 12%, 90%);
+  --dark-gray: hsl(0, 0%, 15%);
+  --near-black: hsl(0, 0%, 8%);
+  --light-gray: hsl(0, 0%, 75%);
 }
 
 .dark {
@@ -70,18 +71,20 @@
 
 @layer components {
   .hero-text {
-    font-size: clamp(5rem, 12vw, 12rem);
-    line-height: 0.8;
-    letter-spacing: -0.04em;
+    font-size: clamp(6rem, 15vw, 15rem);
+    line-height: 0.75;
+    letter-spacing: -0.05em;
     font-weight: 900;
     text-transform: uppercase;
+    font-family: 'Space Grotesk', sans-serif;
   }
   
   .section-title {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    line-height: 0.9;
-    letter-spacing: -0.03em;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.85;
+    letter-spacing: -0.04em;
     font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
   }
   
   .tech-tag {
