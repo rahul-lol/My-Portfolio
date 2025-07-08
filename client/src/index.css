@@ -60,7 +60,7 @@
     @apply font-sans antialiased;
     background-color: var(--cream);
     color: var(--near-black);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
   }
 
   html {
@@ -70,15 +70,17 @@
 
 @layer components {
   .hero-text {
-    font-size: clamp(3rem, 8vw, 8rem);
-    line-height: 0.9;
-    letter-spacing: -0.02em;
+    font-size: clamp(4rem, 10vw, 10rem);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    font-weight: 900;
   }
   
   .section-title {
-    font-size: clamp(2rem, 5vw, 4rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    font-weight: 900;
   }
   
   .tech-tag {
@@ -127,6 +129,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 6rem 0 2rem 0;
   }
 }

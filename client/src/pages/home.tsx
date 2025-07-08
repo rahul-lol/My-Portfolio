@@ -2,7 +2,7 @@ import AnimatedSection from "@/components/animated-section";
 
 export default function Home() {
   return (
-    <section className="page-section pt-16">
+    <section className="page-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <AnimatedSection>

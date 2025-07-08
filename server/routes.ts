@@ -49,11 +49,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Resume download endpoint
   app.get("/api/resume/download", async (req, res) => {
     try {
-      // In a real application, you would serve the actual PDF file
-      // For now, we'll return a message indicating the endpoint exists
-      res.json({ 
-        message: "Resume download endpoint - PDF file would be served here" 
-      });
+      const resumePath = path.join(process.cwd(), "attached_assets", "My Resume_1752009120897.pdf");
+      
+      if (fs.existsSync(resumePath)) {
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', 'attachment; filename="Rahul_Gopi_Resume.pdf"');
+        res.sendFile(resumePath);
+      } else {
+        res.status(404).json({ 
+          message: "Resume file not found" 
+        });
+      }
     } catch (error) {
       console.error("Error downloading resume:", error);
       res.status(500).json({ 

@@ -90,9 +90,11 @@ This is a full-stack personal portfolio website for Rahul Gopi, a Computer Scien
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+Communication style: Simple, everyday language.
+Layout preference: Single scrollable page with smooth animations between sections.
 
 ## Changelog
 
 Changelog:
 - July 08, 2025. Initial setup
+- July 08, 2025. Converted to single-page layout with smooth scrolling navigation, fixed navigation bar overlap issue, and implemented resume download functionality

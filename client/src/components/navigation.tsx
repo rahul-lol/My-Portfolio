@@ -1,43 +1,67 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 
 export default function Navigation() {
-  const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   const navItems = [
-    { path: "/", label: "HOME" },
-    { path: "/about", label: "ABOUT" },
-    { path: "/projects", label: "PROJECTS" },
-    { path: "/resume", label: "RESUME" },
-    { path: "/contact", label: "CONTACT" },
+    { id: "home", label: "HOME" },
+    { id: "about", label: "ABOUT" },
+    { id: "projects", label: "PROJECTS" },
+    { id: "resume", label: "RESUME" },
+    { id: "contact", label: "CONTACT" },
   ];
 
-  useEffect(() => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
     setIsMenuOpen(false);
-  }, [location]);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => item.id);
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom > 100;
+        }
+        return false;
+      });
+      
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--cream)]/95 backdrop-blur-sm border-b border-black/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="font-bold text-xl">
-            <Link href="/">RG</Link>
+            <button onClick={() => scrollToSection("home")}>RG</button>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
                 className={`nav-link font-medium ${
-                  location === item.path ? "active" : ""
+                  activeSection === item.id ? "active" : ""
                 }`}
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </div>
           
@@ -56,13 +80,13 @@ export default function Navigation() {
         <div className="md:hidden bg-white shadow-lg">
           <div className="p-6 space-y-4">
             {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className="block text-lg font-medium"
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="block text-lg font-medium w-full text-left"
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </div>
         </div>
