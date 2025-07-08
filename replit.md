@@ -98,3 +98,4 @@ Layout preference: Single scrollable page with smooth animations between section
 Changelog:
 - July 08, 2025. Initial setup
 - July 08, 2025. Converted to single-page layout with smooth scrolling navigation, fixed navigation bar overlap issue, and implemented resume download functionality
+- July 08, 2025. Completed portfolio with updated color palette, enhanced typography, social media icons, updated project details with GitHub links, and made project cards clickable. Ready for deployment on Vercel.
