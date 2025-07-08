@@ -43,22 +43,25 @@ export default function Home() {
               href="https://linkedin.com/in/rahul-g-639926265"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--light-gray)] hover:text-[var(--cream)] transition-colors text-sm font-medium"
+              className="text-[var(--light-gray)] hover:text-[var(--cream)] transition-colors text-sm font-medium flex items-center gap-2"
             >
+              <i className="fab fa-linkedin text-lg"></i>
               LINKEDIN
             </a>
             <a
               href="https://github.com/rahul-lol"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--light-gray)] hover:text-[var(--cream)] transition-colors text-sm font-medium"
+              className="text-[var(--light-gray)] hover:text-[var(--cream)] transition-colors text-sm font-medium flex items-center gap-2"
             >
+              <i className="fab fa-github text-lg"></i>
               GITHUB
             </a>
             <a
               href="mailto:rahul.gopi0604@gmail.com"
-              className="text-[var(--light-gray)] hover:text-[var(--cream)] transition-colors text-sm font-medium"
+              className="text-[var(--light-gray)] hover:text-[var(--cream)] transition-colors text-sm font-medium flex items-center gap-2"
             >
+              <i className="fas fa-envelope text-lg"></i>
               EMAIL
             </a>
           </div>
