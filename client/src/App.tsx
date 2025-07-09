@@ -9,29 +9,40 @@ import Projects from "@/pages/projects";
 import Resume from "@/pages/resume";
 import Contact from "@/pages/contact";
 import Footer from "@/components/footer";
+import { useFullPageScroll } from "@/hooks/useFullPageScroll";
 
 function Router() {
+  const sectionCount = 6; // home, about, projects, resume, contact, footer
+  const mainRef = useFullPageScroll(sectionCount);
   return (
-    <div className="min-h-screen bg-[var(--cream)] text-[var(--near-black)]">
+    <div className="h-screen flex flex-col bg-[var(--cream)] text-[var(--near-black)]">
       <Navigation />
-      <main>
-        <section id="home">
+      <main
+        ref={mainRef}
+        className="flex-1 overflow-y-scroll"
+        tabIndex={0}
+        id="main-scroll"
+      >
+        <section id="home" data-bg="dark" className="h-screen bg-[var(--near-black)]">
           <Home />
         </section>
-        <section id="about">
+        <section id="about" data-bg="light" className="h-screen">
           <About />
         </section>
-        <section id="projects">
+        <section id="projects" data-bg="light" className="h-screen">
           <Projects />
         </section>
-        <section id="resume">
+        <section id="resume" data-bg="light" className="h-screen">
           <Resume />
         </section>
-        <section id="contact">
+        <section id="contact" data-bg="light" className="h-screen">
           <Contact />
         </section>
+        {/* Footer as a normal footer, not a full page */}
+        <section id="footer" data-bg="dark" className="py-8 bg-black">
+          <Footer />
+        </section>
       </main>
-      <Footer />
     </div>
   );
 }

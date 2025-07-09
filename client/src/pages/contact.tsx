@@ -56,7 +56,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="page-section">
+    <section className="page-section mt-32 md:mt-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <AnimatedSection>

@@ -13,10 +13,10 @@ export default function Resume() {
   };
 
   return (
-    <section className="page-section">
+    <section className="page-section mt-32 md:mt-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
-          <h2 className="section-title font-black text-center mb-16">
+          <h2 className="section-title font-black text-center mb-6">
             RESUME
           </h2>
         </AnimatedSection>
