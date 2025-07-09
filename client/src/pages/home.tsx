@@ -9,7 +9,7 @@ export default function Home() {
           <AnimatedSection direction="left" delay={0.3}>
             <div className="text-lg md:text-xl font-bold text-[var(--light-gray)] space-y-3">
               <p>SPECIALIZING IN AI/ML</p>
-              <p>FULL-STACK DEVELOPER</p>
+              <p>FULL-STACK DEVELOPMENT</p>
               <p>UI/UX</p>
             </div>
           </AnimatedSection>
